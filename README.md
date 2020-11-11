@@ -5,9 +5,11 @@ snowflake node integration script running agains snowflake instance
 
 ### Prerequisites
 
-You need to have `node.js` installed on the machine you're going to run the script from
-
-For the instructions on how to install it visit [node.js official website](https://nodejs.org/en/download/)
+1. Set the environment variables (see section below)
+2. Copy the executable file `snowflake_node_query_integration-win.exe` somewhere on the machine
+3. 
+4. Copy `flex-example.yml` to `C:\Program Files\newrelic\newrelic-infra\integrations.d`
+5. Replace the values in `flex-example.yml` with the path to the executable and the queries
 
 ### Assign values to the following environment variables:
 
@@ -21,20 +23,24 @@ For the instructions on how to install it visit [node.js official website](https
 For example on Mac OS/Linux do `export SNOWSQL_ACCOUNT=ab123.west-europe.azure`
 On Windows do `set SNOWSQL_ACCOUNT=abc123.west-europe.azure`
 
-### Install node modules
+### Developing
+
+You need to have `node.js` installed on the machine you're going to run the script from
+
+For the instructions on how to install it visit [node.js official website](https://nodejs.org/en/download/)
+
+#### Install node modules
 
 Run `npm install` in the main directory to install all node dependencies (mainly `snowflake-sdk`) to be able to connect to Snowflake instance
 
-### Pass sql file name when running the script
+#### Pass sql file name when running the script
 
 You must provide the name of an sql file containing an sql query you want to run agains your Snowflake instance
 
-In this repo there is an example sql file `test.sql` containing a query.
+In this repo there is an example sql file `queries/test.sql` containing a query.
 
-The main script in this repo is `node_snowflake.js`
+Executable binaries can be generated for Windows, Linux and Mac OS by running
+`pkg .`
 
-Run the script like this:
-
-`node node_snowflake.js test.sql`
-
-The above command will run the query from `test.sql` agains the Snowflake instance set up by the environment variable from the first step
+You must pass a SQL file as input for the program
+`snowflake_node_query_integration-win.exe file.sql`
