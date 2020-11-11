@@ -1,0 +1,22 @@
+{
+  "name": "snowflake_node_query_integration",
+  "version": "1.0.0",
+  "description": "script connecting to snowflake instance and running sql queries against it",
+  "main": "node_snowflake.js",
+  "bin": "bin.js",
+  "dependencies": {
+    "snowflake-sdk": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "snowflake",
+    "node",
+    "flex",
+    "newrelic"
+  ],
+  "author": "",
+  "license": "ISC"
+}

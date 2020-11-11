@@ -1,0 +1,1 @@
+SELECT * FROM TPCH_SF1.ORDERS limit 2;

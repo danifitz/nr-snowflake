@@ -1,0 +1,1 @@
+select * from table(information_schema.query_history(dateadd(minute, -2, getdate()))) order by start_time;

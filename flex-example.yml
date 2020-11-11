@@ -1,0 +1,31 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: snowflake
+      global:
+        custom-attributes:
+          environment: production
+      apis:
+        - name: snowflakeDataStorageUsage
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\account-usage\data-storage-usage.sql
+        - name: snowflakeFailedLogins
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\account-usage\failed-logins.sql
+        - name: snowflakeStageStorageUsage
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\account-usage\stage-storage-usage.sql
+        - name: snowflakeTotalJobsExecutedByAccount
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\account-usage\total-jobs-executed-by-account.sql
+        - name: snowflakeWarehouseMetering
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\account-usage\warehouse-metering.sql
+        - name: snowflakeQueryHistory
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\information-schema\query-history.sql
+        - name: snowflakeWarehouseQueryHistory
+          commands:
+            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\information-schema\warehouse-query-metrics.sql
