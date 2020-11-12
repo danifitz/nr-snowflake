@@ -20,6 +20,7 @@ snowflake node integration script running agains snowflake instance
 - `SNOWSQL_DB` - snowflake DB name you want to run queries against
 - `SNOWSQL_SCHEMA` - snowflake schema you want to use (e.g. account-usage)
 - `SNOWSQL_ROLE` - snowflake role that should be used when querying (must have access to account_usage and information_schema)
+- `SNOWSQL_WAREHOUSE` - the snowflake warehouse you want to connect to 
 
 For example on Mac OS/Linux do `export SNOWSQL_ACCOUNT=ab123.west-europe.azure`
 On Windows do `set SNOWSQL_ACCOUNT=abc123.west-europe.azure`
