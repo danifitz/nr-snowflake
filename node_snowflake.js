@@ -8,6 +8,7 @@ const user = process.env.SNOWSQL_USER;
 const password = process.env.SNOWSQL_PWD;
 const database = process.env.SNOWSQL_DB;
 const schema = process.env.SNOWSQL_SCHEMA;
+const role = process.env.SNOWSQL_ROLE;
 
 const isDate = function(date) {
   return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
@@ -20,7 +21,7 @@ module.exports = function(sqlFileName) {
     password: password,
     database: database,
     schema: schema,
-    role: 'accountadmin'
+    role: role
   });
   
   connection.connect(
