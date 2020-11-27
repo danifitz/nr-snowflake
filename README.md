@@ -7,9 +7,8 @@ snowflake node integration script running agains snowflake instance
 
 1. Set the environment variables (see section below)
 2. Copy the executable file `snowflake_node_query_integration-win.exe` somewhere on the machine
-3. 
-4. Copy `flex-example.yml` to `C:\Program Files\newrelic\newrelic-infra\integrations.d`
-5. Replace the values in `flex-example.yml` with the path to the executable and the queries
+3. Copy `flex-example.yml` to `C:\Program Files\newrelic\newrelic-infra\integrations.d`
+4. Replace the values in `flex-example.yml` with the path to the executable and the queries
 
 ### Assign values to the following environment variables:
 
@@ -29,6 +28,15 @@ On Windows do `set SNOWSQL_ACCOUNT=abc123.west-europe.azure`
 
 Add queries to the `queries` directory and then add a new block to the nri-flex YML config file.
 
+### Building a binary for Windows, Linux or Mac OS
+
+To build a binary, install `pkg`
+`npm install pkg -g`
+
+Run the `pkg` command to generate binaries for Linux, Windows and Mac OS or specify your platform.
+
+Use this binary with the Flex integration to send data to New Relic from Snowflake.
+
 ### Developing
 
 You need to have `node.js` installed on the machine you're going to run the script from
@@ -43,7 +51,7 @@ Run `npm install` in the main directory to install all node dependencies (mainly
 
 You must provide the name of an sql file containing an sql query you want to run agains your Snowflake instance
 
-In this repo there is an example sql file `queries/test.sql` containing a query.
+In this repo there is an example sql file `queries/test.sql` containing a query.  
 
 Executable binaries can be generated for Windows, Linux and Mac OS by running
 `pkg .`
