@@ -1,5 +1,5 @@
 {
-  "name": "snowflake_node_query_integration",
+  "name": "snowflake_newrelic_query_integration",
   "version": "1.0.0",
   "description": "script connecting to snowflake instance and running sql queries against it",
   "main": "node_snowflake.js",

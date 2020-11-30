@@ -1,4 +1,4 @@
 node_modules
-snowflake_node_query_integration-linux
-snowflake_node_query_integration-macos
+snowflake_node_query_integration-*
+snowflake_newrelic_query_integration-*
 flex.yml
