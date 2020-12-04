@@ -1,7 +1,7 @@
 ---
 integrations:
   - name: nri-flex
-    interval: 30s
+    interval: 3600s
     config:
       name: snowflake
       global:
@@ -23,9 +23,3 @@ integrations:
         - name: snowflakeWarehouseMetering
           commands:
             - run: C:\Path\to\executable.exe C:\path\to\queries\queries\account-usage\warehouse-metering.sql
-        - name: snowflakeQueryHistory
-          commands:
-            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\information-schema\query-history.sql
-        - name: snowflakeWarehouseQueryHistory
-          commands:
-            - run: C:\Path\to\executable.exe C:\path\to\queries\queries\information-schema\warehouse-query-metrics.sql

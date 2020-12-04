@@ -1,5 +1,12 @@
-# snowflake node integration
-snowflake node integration script running agains snowflake instance
+# New Relic Snowflake Integration
+
+This integration provides a script which can run any query against a Snowflake account and store the results in New Relic.
+
+Use cases include:
+* Monitor Query performance
+* Monitor logins and identify potential security incidents
+* Monitor and optimise warehouse and cloud credit costs
+* Capture any data you have stored in Snowflake for real-time alerting and reporting.
 
 # How to run
 
