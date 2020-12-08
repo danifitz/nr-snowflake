@@ -1,1 +1,0 @@
-select count(*) as number_of_jobs from "SNOWFLAKE"."ACCOUNT_USAGE"."QUERY_HISTORY" where start_time >= date_trunc(month, current_date);
